@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_main"
+        android:orderInCategory="4"
+        android:title="Главное меню" />
+    <item
+        android:id="@+id/item_goals"
+        android:orderInCategory="1"
+        android:title="Список целей" />
+    <item
+        android:id="@+id/item_settings"
+        android:orderInCategory="3"
+        android:title="Настройки" />
+    <item
+        android:id="@+id/item_timetable"
+        android:orderInCategory="2"
+        android:title="Расписание" />
+    <item
+        android:id="@+id/item_help"
+        android:orderInCategory="5"
+        android:title="Помощь" />
+</menu>

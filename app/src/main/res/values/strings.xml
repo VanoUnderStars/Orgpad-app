@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Orgpad</string>
+    <string name="app_text">Stop right there, you criminal scum!\n You are under arrest!</string>
+    <string name="btn_text">Do something!</string>
+    <string-array name="importance">
+        <item>Очень важная</item>
+        <item>Важная</item>
+        <item>Обычная важность</item>
+        <item>Второстепенная</item>
+        <item>Незначительная</item>
+    </string-array>
+    <string-array name="task_difficulty">
+        <item>Сложная задача</item>
+        <item>Обычная задача</item>
+        <item>Легкая задача</item>
+    </string-array>
+    <string-array name="duration">
+        <item>Длинная задача</item>
+        <item>Средняя задача</item>
+        <item>Короткая задача</item>
+    </string-array>
+    <string-array name="priority">
+        <item>Вне очереди</item>
+        <item>Высокий приоритет</item>
+        <item>Обычный приоритет</item>
+        <item>Низкий приоритет</item>
+        <item>В последнюю очередь</item>
+    </string-array>
+    <string-array name="difficulty">
+        <item>Сильная загруженность</item>
+        <item>Средняя загруженность</item>
+        <item>Слабая загруженность</item>
+    </string-array>
+    <string-array name="primarily">
+        <item>Сначала сложные задачи</item>
+        <item>Сбалансированно</item>
+        <item>Сначала легкие задачи</item>
+    </string-array>
+    <string name="title_activity_receive_message">ReceiveMessageActivity</string>
+    <string name="title_activity_goals">Goals</string>
+    <string name="title_activity_tasks">Tasks</string>
+    <string name="title_activity_achievements">Achievements</string>
+</resources>

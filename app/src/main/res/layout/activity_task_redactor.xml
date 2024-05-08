@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    tools:context=".Tasks.TaskRedactor">
+
+    <include
+        android:id="@+id/task_redactor_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-16dp"
+        android:layout_marginLeft="-16dp"
+        android:layout_marginRight="-16dp"
+        layout="@layout/toolbar"/>
+
+    <Switch
+        android:layout_gravity="right"
+        android:id="@+id/active"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Мгновенная/Продолжительная" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:id="@+id/name"
+        android:hint="Название задачи"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:id="@+id/description"
+        android:hint="Описание" />
+
+    <Spinner
+        android:id="@+id/importance"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/importance"
+        android:layout_gravity="right"/>
+
+    <Spinner
+        android:id="@+id/duration"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/duration"
+        android:layout_gravity="right"/>
+
+    <Spinner
+        android:id="@+id/task_difficulty"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/task_difficulty"
+        android:layout_gravity="right"/>
+
+    <RelativeLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/complete"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:scaleType="centerCrop"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:onClick="setCompleted"
+            android:src="@drawable/checkmark" />
+
+
+        <ImageButton
+            android:id="@+id/delete"
+            android:scaleType="centerCrop"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_row="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/complete"
+            android:layout_toRightOf="@+id/complete"
+            android:onClick="onClickDelete"
+            android:src="@drawable/trashcan"/>
+
+
+        <Button
+            android:id="@+id/fin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:onClick="onClickFin"
+            android:text="Сохранить" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:clipToPadding="false"
+    tools:context=".Settings.SettingsActivity">
+
+    <include
+        android:id="@+id/table_redactor_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-17dp"
+        android:layout_marginLeft="-17dp"
+        android:layout_marginRight="-17dp"
+        layout="@layout/toolbar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Текущая задача:" />
+
+    <Spinner
+        android:id="@+id/task_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Время на выполнение задачи:" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/starthour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setTime"
+            android:text="00:00"
+            android:textColor="#000000"
+            android:textSize="5mm"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@+id/starthour"
+            android:layout_toRightOf="@+id/starthour"
+            android:gravity="center"
+            android:text="—"
+            android:textSize="5mm" />
+
+        <TextView
+            android:id="@+id/endhour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_marginStart="43dp"
+            android:layout_marginLeft="43dp"
+            android:layout_toEndOf="@+id/starthour"
+            android:layout_toRightOf="@+id/starthour"
+            android:onClick="setTime"
+            android:text="11:00"
+            android:textColor="#000000"
+            android:textSize="5mm"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="47dp"
+            android:layout_height="44dp"
+            android:layout_column="0"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="3dp"
+            android:onClick="showDialog"
+            android:src="@drawable/question" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="5"
+            android:layout_columnSpan="2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="7dp"
+            android:onClick="onClickSave"
+            android:text="Сохранить" />
+    </RelativeLayout>
+</LinearLayout>
